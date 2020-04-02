@@ -50,7 +50,7 @@ class Communicator:
             self.listen()
             self.send_public_key()
             self.save_public_key(self.foreign_public_key)
-            # self.save_private_key(self.private_key)
+            self.save_private_key(self.private_key)
             self.listen()
             self.send_session_key()
             logger.info("Established connection as server")
@@ -60,7 +60,7 @@ class Communicator:
             self.send_public_key()
             self.listen()
             self.save_public_key(self.foreign_public_key)
-            # self.save_private_key(self.private_key)
+            self.save_private_key(self.private_key)
             self.send_session_key()
             self.listen()
             logger.info("Established connection as client")
@@ -116,7 +116,7 @@ class Communicator:
 
     def receive_session_key(self) -> None:
         encrypted_session_key = self.receive_bytes()
-        self.foreign_session_key = PKCS1_OAEP.new(self.private_key).decrypt(encrypted_session_key)
+        self.foreign_session_key = PKCS1_OAEP.new(self.read_private_key()).decrypt(encrypted_session_key)
         logger.debug(f"Received session key: {self.foreign_session_key}")
 
     def receive_bytes(self) -> bytes:

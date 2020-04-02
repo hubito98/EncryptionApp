@@ -1,6 +1,4 @@
 .idea/
 __pycache__
-EncryptionApp/Client/
-keys
-EncryptionApp/Server/
-keys
+EncryptionApp/Client/keys
+EncryptionApp/Server/keys
