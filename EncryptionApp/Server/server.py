@@ -1,8 +1,6 @@
 import sys
 import logging
 
-# sys.path.append("/Users/hubertskrzypczak/PycharmProjects/BSK_1/")
-
 from EncryptionApp.GUI import App
 
 logging.basicConfig(level=logging.DEBUG)
