@@ -1,5 +1,5 @@
 # EncryptionApp
-App for sending encrypted (AES in different modes) files and text with session key (that is encrypt with RSA) for University project.
+App for sending encrypted (AES in different modes) files and text with session key (that is encrypt with RSA) for university project.
 
 # Installation
 To install just run command `pip install .`
